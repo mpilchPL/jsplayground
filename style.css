@@ -1,0 +1,58 @@
+body {
+    background-color: #444444;
+    color: white;
+
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.north {
+    background-color: #555555;
+    min-height: 20px;
+    font-size: 18px;
+    padding: 4px;
+}
+
+.north h2 {
+    font-size: 20px;
+}
+
+.north p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.jswork {
+    margin-top: 10px;
+    border: 2px solid #222222;
+}
+
+
+.south {
+    background-color: #333333;
+    min-height: 20px;
+    font-size: 18px;
+    padding: 4px;
+}
+
+pre {
+    white-space: pre;
+    margin: 0;
+}
+
+.codeBtn button {
+    font-size: 10px;
+}
+
+input.shortNum {
+   max-width: 60px; 
+}
+
+.result {
+    overflow-wrap: break-word;
+}
+

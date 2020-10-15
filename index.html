@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JS Playground</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!--### bootstrap files ###-->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--#region JS SCRIPTS -->
+    <script src="scripts/simpleClock.js"></script>
+    <script src="scripts/checkNumber.js"></script>
+    <script src="scripts/writeNumbersInRange.js"></script>
+    <!--#endregion -->
+
+</head>
+
+<body onload="updateTime()">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">JS Playground</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        
+    </header>
+    
+    <main>
+        <div class="container">
+            <header>
+                <h1>This is my playground, while learning JS</h1>
+            </header>
+
+            <div class="row">
+
+                <!--#region Template ########-->
+                <div class="col-sm-12 bg-dark w-100 p-0 jswork">
+                    <article>
+                        <div class="north">
+                            <h2>Template</h2>
+                            <p>this is a template for further use</p>
+                        </div>
+                        <div class="south">
+                            <div class="function" id="">
+                                function div
+                            </div>
+                            <div class="codeBtn d-flex justify-content-end">
+                                <button class="btn btn-secondary btn-sm " type="button" data-toggle="collapse" data-target="#codeCollapse" aria-expanded="false" aria-controls="collapseExample">
+                                    Code
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="codeCollapse">
+                            <div class="code">
+                                <pre>
+                                    <code class="javascript">
+                                        code
+                                        code
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--#endregion ################# ###-->
+
+                <!--#region CLOCK ###################### -->
+                <div class="col-sm-12 bg-dark w-100 p-0 jswork">
+                    <article>
+                        <div class="north">
+                            <h2>Clock</h2>
+                            <p>Simplest, self-refreshed clock that includes current date</p>
+                        </div>
+                        <div class="south">
+                            <div class="function" id="simpleClock">
+                                function div
+                            </div>
+                            <div class="codeBtn d-flex justify-content-end">
+                                <button class="btn btn-secondary btn-sm " type="button" data-toggle="collapse" data-target="#codeClock" aria-expanded="false" aria-controls="collapseExample">
+                                    Code
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="codeClock">
+                            <div class="code">
+                                <pre>
+                                    <code class="javascript">
+                                        //TODO load code directly from script file
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--#endregion #########################-->
+
+                <!--#region CHECK NUMBER ########-->
+                <div class="col-sm-12 bg-dark w-100 p-0 jswork">
+                    <article>
+                        <div class="north">
+                            <h2>Check number</h2>
+                            <p>Script checks whether given number is greater / lesser or equal to 0</p>
+                        </div>
+                        <div class="south">
+                            <div class="function" id="checkNumber">
+                                <input type="number" id="numberField"/>
+                                <input type="button" value="Check" onclick="checkNumber()"/>
+                                <div class="result" id="checkNumberValue"></div>
+                            </div>
+                            <div class="codeBtn d-flex justify-content-end">
+                                <button class="btn btn-secondary btn-sm " type="button" 
+                                data-toggle="collapse" data-target="#codeCheckNumber" aria-expanded="false" 
+                                aria-controls="collapseExample">
+                                    Code
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="codeCheckNumber">
+                            <div class="code">
+                                <pre>
+                                    <code class="javascript">
+                                        code
+                                        code
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--#endregion ################# ###-->
+
+                <!--#region WRITE ALL NUMBERS IN GIVEN RANGE ########-->
+                <div class="col-sm-12 bg-dark w-100 p-0 jswork">
+                    <article>
+                        <div class="north">
+                            <h2>Write numbers in given range</h2>
+                            <p>Script writes down all numbers in given range</p>
+                        </div>
+                        <div class="south">
+                            <div class="function" id="writeNumbersInRange">
+                                <input type="number" id="fromNumber" class="shortNum"/>
+                                <input type="number" id="toNumber" class="shortNum"/>
+                                <input type="button" value="Write" onclick="writeNumbersInRange()"/>
+                                <input type="button" value="Clear" onclick="clearWriteNumbersInRange()">
+                                <div class="result" id="writeNumbersInRangeResult"></div>
+                            </div>
+                            <div class="codeBtn d-flex justify-content-end">
+                                <button class="btn btn-secondary btn-sm " type="button" 
+                                data-toggle="collapse" data-target="#codeWriteNumbersInRange" aria-expanded="false" 
+                                aria-controls="codeWriteNumbersInRange">
+                                    Code
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="codeWriteNumbersInRange">
+                            <div class="code">
+                                <pre>
+                                    <code class="javascript">
+                                        code
+                                        code
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--#endregion ################# ###-->
+
+                <!--#region SIMPLE SLIDER ########-->
+                <div class="col-sm-12 bg-dark w-100 p-0 jswork">
+                    <article>
+                        <div class="north">
+                            <h2>Simple slider</h2>
+                            <p>Script changes images in div every few seconds</p>
+                        </div>
+                        <div class="south w-100">
+
+                            <div class="function" id="simpleSlider">
+                                <div class="d-flex flex-fill">
+                                    <img src="img/slides/default.png" class="img-fluid" alt="default">
+                                </div>
+                            </div>
+
+                            <div class="codeBtn d-flex justify-content-end">
+                                <button class="btn btn-secondary btn-sm " type="button" 
+                                data-toggle="collapse" data-target="#codeSimpleSlider" aria-expanded="false" 
+                                aria-controls="codeSimpleSlider">
+                                    Code
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="codeSimpleSlider">
+                            <div class="code">
+                                <pre>
+                                    <code class="javascript">
+                                        code
+                                        code
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--#endregion ################# ###-->
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+
+</html>
