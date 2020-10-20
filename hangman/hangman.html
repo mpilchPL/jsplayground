@@ -14,22 +14,64 @@
 
 <body>
     <header>        
-        <h1>This is my playground, while learning JS</h1>
+        <h1>Hangman</h1>
     </header>
     
     <main>
         <article class="game">
             <div class="container">
                 <div class="row gameContainer">
+                    <div class="col-sm-12" id="wordBar">
+                        Click 'start' to draw word
+                    </div>
 
-                    <div class="col-lg-6 p-1">
+                    <div class="col-lg-6 p-1 mt-3 mb-3">
                         <img src="img/hangman.png" alt="">
                     </div>
                     
-                    <div class="col-lg-6 p-1">
-                        <div class="letterButton" onclick="">A</div>
+                    <div class="col-lg-6 p-1 mt-3 mb-3">
+                        <div class="letterButton">A</div>
+                        <div class="letterButton polish">Ą</div>
+                        <div class="letterButton">B</div>
+                        <div class="letterButton">C</div>
+                        <div class="letterButton polish">Ć</div>
+                        <div class="letterButton">D</div>
+                        <div class="letterButton">E</div>
+                        <div class="letterButton polish">Ę</div>
+                        <div class="letterButton">F</div>
+                        <div class="letterButton">G</div>
+                        <div class="letterButton">H</div>
+                        <div class="letterButton">I</div>
+                        <div class="letterButton">J</div>
+                        <div class="letterButton">K</div>
+                        <div class="letterButton">L</div>
+                        <div class="letterButton polish">Ł</div>
+                        <div class="letterButton">M</div>
+                        <div class="letterButton">N</div>
+                        <div class="letterButton">O</div>
+                        <div class="letterButton polish">Ó</div>
+                        <div class="letterButton">P</div>
+                        <div class="letterButton">Q</div>
+                        <div class="letterButton">R</div>
+                        <div class="letterButton">S</div>
+                        <div class="letterButton polish">Ś</div>
+                        <div class="letterButton">T</div>
+                        <div class="letterButton">U</div>
+                        <div class="letterButton">W</div>
+                        <div class="letterButton">X</div>
+                        <div class="letterButton">Y</div>
+                        <div class="letterButton">Z</div>
+                        <div class="letterButton polish">Ź</div>
+                        <div class="letterButton polish">Ż</div>
+
+                        
                     </div>
 
+                    <div class="col-sm-12 optionsBar">
+                        <div class="btn btn-secondary btn-sm flex-row" id="langBtn"> Lang </div>
+                        <div class="flagIcons d-inline-block"><img src="img/flags/poland.png" id="flagIcon" alt=""></div>
+                        <div class="btn btn-secondary btn-sm" id="startBtn"> Start </div>
+                    </div>
                 </div>
             </div>
         </article>
@@ -41,6 +83,11 @@
     <!--### bootstrap files ###-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js"></script>
+
+    <!--### utils ###-->
+    <script src="../utils/utils.js"></script>
+    <script src="scripts/game.js"></script>
+
 </body>
 
 </html>
