@@ -17,6 +17,14 @@ h1 {
     padding: 4px;
 }
 
+.northWhite {
+    background-color: white;
+    min-height: 20px;
+    font-size: 18px;
+    padding: 4px;
+    color: black;
+}
+
 .north h2 {
     font-size: 20px;
 }
@@ -56,3 +64,12 @@ input.shortNum {
     overflow-wrap: break-word;
 }
 
+
+.buttonsSlider {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#slider1 {
+    min-height: 208px;
+}

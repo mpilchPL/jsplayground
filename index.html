@@ -9,24 +9,11 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="styles/default.css">
-    <script src="highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
 
-    <!--### bootstrap files ###-->
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <!--#region JS SCRIPTS -->
-    <script src="scripts/simpleClock.js"></script>
-    <script src="scripts/checkNumber.js"></script>
-    <script src="scripts/writeNumbersInRange.js"></script>
-    <!--#endregion -->
 
 </head>
 
-<body onload="updateTime()">
+<body onload="updateTime(), changeSlide()">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">JS Playground</a>
@@ -77,7 +64,7 @@
                                 function div
                             </div>
                             <div class="codeBtn d-flex justify-content-end">
-                                <button class="btn btn-secondary btn-sm " type="button" data-toggle="collapse" data-target="#codeCollapse" aria-expanded="false" aria-controls="collapseExample">
+                                <button onclick="showCode('test.txt', 'templateCode')" class="btn btn-secondary btn-sm" type="button" data-toggle="collapse" data-target="#codeCollapse" aria-expanded="false" aria-controls="collapseExample">
                                     Code
                                 </button>
                             </div>
@@ -86,9 +73,9 @@
                         <div class="collapse" id="codeCollapse">
                             <div class="code">
                                 <pre>
-                                    <code class="javascript">
+                                    <code class="javascript" id="templateCode">
                                         code
-                                        code
+                                        codeaaaaa
                                     </code>
                                 </pre>
                             </div>
@@ -205,15 +192,20 @@
                 <!--#region SIMPLE SLIDER ########-->
                 <div class="col-sm-12 bg-dark w-100 p-0 jswork">
                     <article>
-                        <div class="north">
+                        <div class="north" id="sld">
                             <h2>Simple slider</h2>
                             <p>Script changes images in div every few seconds</p>
                         </div>
                         <div class="south w-100">
 
                             <div class="function" id="simpleSlider">
-                                <div class="d-flex flex-fill">
-                                    <img src="img/slides/default.png" class="img-fluid" alt="default">
+                                <div class="d-flex flex-fill justify-content-center" id="slider1">
+                                    <img src="img/slides/slide1.png" class="img-fluid" alt="imageslider">
+                                    
+                                </div>
+                                <div class="buttonsSlider d-flex justify-content-center">
+                                    <button id="previousSlide">Previous</button>
+                                    <button id="nextSlide">Next</button>
                                 </div>
                             </div>
 
@@ -239,11 +231,60 @@
                     </article>
                 </div>
                 <!--#endregion ################# ###-->
+
+                <!--#region     HANGMAN / WISIELEC ########-->
+                <div class="col-sm-12 bg-dark w-100 p-0 jswork">
+                    <article>
+                        <div class="north">
+                            <h2>Hangman</h2>
+                            <p>A words game written in js</p>
+                        </div>
+                        <div class="south">
+                            <div class="function" id="">
+                                <img src="" alt="">
+                            </div>
+                            <div class="codeBtn d-flex justify-content-end">
+                                <button onclick="showCode('test.txt', 'templateCode')" class="btn btn-secondary btn-sm" type="button" data-toggle="collapse" data-target="#codeCollapse" aria-expanded="false" aria-controls="collapseExample">
+                                    Code
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="codeCollapse">
+                            <div class="code">
+                                <pre>
+                                    <code class="javascript" id="templateCode">
+                                        code
+                                        codeaaaaa
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--#endregion ################# ###-->
             </div>
         </div>
         
     </main>
 
+
+    <!--### jQuery ###-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--### bootstrap files ###-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!--#region JS SCRIPTS -->
+    <script src="scripts/simpleClock.js"></script>
+    <script src="scripts/checkNumber.js"></script>
+    <script src="scripts/writeNumbersInRange.js"></script>
+    <script src="scripts/simpleSlider.js"></script>
+    <script src="scripts/showCode.js"></script>
+    <!--#endregion -->
 </body>
 
 </html>
