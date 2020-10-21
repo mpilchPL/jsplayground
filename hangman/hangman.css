@@ -72,6 +72,9 @@ h1 {
 #wordBar {
     background-color: #222222;
     text-align: center;
+    font-size: 44px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
 }
 
 

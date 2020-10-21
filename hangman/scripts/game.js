@@ -1,10 +1,9 @@
 var polishLetters = true;
-var wordsArrayPolish = new Array("jabłko", "lodówka");
+var wordsArrayPolish = new Array("jabłko", "lodówka", "energia");
 var wordsArrayEnglish = new Array("apple", "fridge");
 var defaultWord = "Click start to draw word";
 var currentWord = "";
 var gameRunning = false;
-//var currentGame = new Game();
 
 
 $(".letterButton").click(function (e) { 
@@ -12,8 +11,13 @@ $(".letterButton").click(function (e) {
     if ($(this).hasClass('bingo')) return;
     if (!gameRunning) return;
 
-
-    $(this).toggleClass('miss');
+    if (letterExist($(this).html())) {
+        $(this).addClass('bingo');
+        
+    } else {
+        $(this).addClass('miss');
+    }
+    
     
 });
 
@@ -46,13 +50,17 @@ $("#startBtn").click(function (e) {
     }
 
     else $("#startBtn").html("Stop");                // game just started
-        
     
-
-    if (polishLetters)
-        $("#wordBar").html(wordsArrayPolish.getRandom());
-    else
-        $("#wordBar").html(wordsArrayEnglish.getRandom());
+    $("#langBtn").addClass('disabled');
+    if (polishLetters) {
+        currentWord = wordsArrayPolish.getRandom();
+    }
+        
+    else {
+        currentWord = wordsArrayEnglish.getRandom();
+    }
+    $("#wordBar").html(currentWord);
+        
 });
 
 
@@ -60,15 +68,15 @@ function cleanLetterTileColours() {
     // removes any miss & bingo classes in letter tiles
     $(".letterButton").removeClass('bingo');
     $(".letterButton").removeClass('miss');
- }
+}
 
- function changeFlag (nation) { 
+function changeFlag (nation) { 
     $("#flagIcon").attr("src", "img/flags/" + nation);
-  }
+}
 
- class Game {
-
-    constructor () {
-
+function letterExist(letter) {
+    if (currentWord.length > 0) {
+        var chars = currentWord.getCharsIndexes(letter);
+        return (chars.length > 0) ? true : false;
     }
- }
+}
