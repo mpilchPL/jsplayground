@@ -16,7 +16,19 @@ String.prototype.insertAt = function (loc,strChunk) {
     return (this.valueOf().substr(0,loc)) + strChunk + (this.valueOf().substr(loc));
  };
 
- Array.prototype.getRandom = function () { 
+ String.prototype.replaceAt = function (index, newChar) { 
+   if (this.length < 1) return;
+   if (index == 0) {
+      return (newChar + (this.valueOf().substr(index + 1)));
+   }
+   if (index == this.length -1 ) {
+      return ((this.valueOf().substr(0,index)) + newChar);
+   }
+   return (this.valueOf().substr(0,index)) + newChar + (this.valueOf().substr(index + 1));
+};
+
+Array.prototype.getRandom = function () { 
     var n = Math.floor(Math.random() * this.length);
     return this[n];
- };
+};
+
