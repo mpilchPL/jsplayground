@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="hangman.css">
     <link rel="stylesheet" href="styles/default.css">
 
-
+    <audio src="booing.mp3" type="audio/mpeg" id="boo"></audio>
+    <audio src="cheering.mp3" type="audio/mpeg" id="cheers"></audio>
 </head>
 
 <body>
@@ -24,7 +25,11 @@
                     <div class="col-sm-12 pt-4 pb-4" id="wordBar">
                         Click 'start' to draw word
                     </div>
-
+                    <div class="col-sm-12 optionsBar d-flex flex-row-reverse">
+                        <div class="flagIcons d-inline-block px-1"><img src="img/flags/poland.png" id="flagIcon" alt=""></div>
+                        <div class="btn btn-secondary btn-sm px-3" id="langBtn"> Lang </div>
+                        <div class="btn btn-secondary btn-sm px-3 mr-auto" id="startBtn"> Start </div>
+                    </div>
                     <div class="col-lg-6 p-1 mt-3 mb-3" id="image">
                         <img src="img/w0.png" alt="">
                     </div>
@@ -65,12 +70,6 @@
                         <div class="letterButton polish">Ż</div>
 
                         
-                    </div>
-
-                    <div class="col-sm-12 optionsBar">
-                        <div class="btn btn-secondary btn-sm flex-row" id="langBtn"> Lang </div>
-                        <div class="flagIcons d-inline-block"><img src="img/flags/poland.png" id="flagIcon" alt=""></div>
-                        <div class="btn btn-secondary btn-sm" id="startBtn"> Start </div>
                     </div>
                 </div>
             </div>

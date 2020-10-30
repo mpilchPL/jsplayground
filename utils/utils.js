@@ -14,9 +14,9 @@ String.prototype.getCharsIndexes = function (char) {
 
 String.prototype.insertAt = function (loc,strChunk) { 
     return (this.valueOf().substr(0,loc)) + strChunk + (this.valueOf().substr(loc));
- };
+};
 
- String.prototype.replaceAt = function (index, newChar) { 
+String.prototype.replaceAt = function (index, newChar) { 
    if (this.length < 1) return;
    if (index == 0) {
       return (newChar + (this.valueOf().substr(index + 1)));
@@ -28,7 +28,7 @@ String.prototype.insertAt = function (loc,strChunk) {
 };
 
 Array.prototype.getRandom = function () { 
-    var n = Math.floor(Math.random() * this.length);
-    return this[n];
+   var n = Math.floor(Math.random() * this.length);
+   return this[n];
 };
 

@@ -61,7 +61,6 @@ $(".letterButton").click(function (e) {
 $(selectorID.langBtnId).click(function (e) {
     if(gameRunning) return;
     cleanLetterTileColours();
-    
     if (polishLetters) {
         $(".polish").hide();
         changeFlag("greatbritain.png");
@@ -84,7 +83,7 @@ $(selectorID.startBtnId).click(function (e) {
         return;
     }
     else $(selectorID.startBtnId).html("Stop");                // game just started
-    
+    currentImage.index = 0;
     $(selectorID.langBtnId).addClass('disabled');
     if (polishLetters) { currentWord = wordsArrayPolish.getRandom(); } // DRAW RANDOM WORD FROM ARRAY
     else { currentWord = wordsArrayEnglish.getRandom(); }
@@ -115,12 +114,14 @@ var isWordRevealed = (word) => word.includes(encryptionSign) ? false : true;   /
 
 var gameOver = (wl) => {
     if (wl == "win") {      //PLAYER WON
-        alert('player won');  //TODO add proper info
+        $('audio#cheers')[0].play();
         cleanLetterTileColours();
+        $(selectorID.wordBarID).html("CONGRATULATIONS. YOU WON");
         stopGame();
     } else {                //PLAYER LOST
-        alert('player lost'); //TODO add proper info
+        $('audio#boo')[0].play()
         cleanLetterTileColours();
+        $(selectorID.wordBarID).html("GAME OVER. YOU LOST");
         stopGame();
     }
 }
@@ -148,7 +149,5 @@ var gameOver = (wl) => {
  var stopGame = () => {
     $(selectorID.startBtnId).html("Sart");   
     $(selectorID.langBtnId).removeClass('disabled');
-    $(selectorID.wordBarID).html(defaultWord);
-    currentImage.index = 0;
     gameRunning = false;
  }
